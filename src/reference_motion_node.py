@@ -17,7 +17,7 @@ def load_motion_files(dir: str) -> dict:
 
 def publish_motion(pub: rospy.Publisher, motion: list):
     cur_item = 0
-    rate = rospy.Rate(60)
+    rate = rospy.Rate(50)
     print("[INFO] Publishing motion...")
     while cur_item < len(motion):
         if rospy.is_shutdown():
